@@ -259,7 +259,20 @@ testLogicalOr(15);
 [1.Introducing Else Statements](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/introducing-else-statements)
 ```js
 // Finish and Paste your solution here
+function testElse(val) {
+  let result = "";
+  // Only change code below this line
 
+  if (val >= 11 || val >= 6 ) {
+    result = "Bigger than 5";
+  }
+  else {
+    result = "5 or Smaller";
+  }
+  return result;
+}
+
+testElse(10);
 
 
 
@@ -268,7 +281,15 @@ testLogicalOr(15);
 [2.Introducing Else If Statements](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/introducing-else-if-statements)
 ```js
 // Finish and Paste your solution here
-
+function testElseIf(num) {
+    if (num < 5) {
+        return "Smaller than 5";
+    } else if (num >= 5 && num <= 10) {
+        return "Between 5 and 10";
+    } else {
+        return "Greater than 10";
+    }
+}
 
 
 
@@ -278,7 +299,17 @@ testLogicalOr(15);
 [3.Logical Order in If Else Statements](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/logical-order-in-if-else-statements)
 ```js
 // Finish and Paste your solution here
+function orderMyLogic(val) {
+  if (val < 5) {
+    return "Less than 5";
+  } else if (val >= 5 && val <= 10) {
+    return "Less than 10";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
 
+orderMyLogic(7);
 
 
 
@@ -287,7 +318,25 @@ testLogicalOr(15);
 [4.Chaining If Else Statements](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/chaining-if-else-statements)
 ```js
 // Finish and Paste your solution here
+function testSize(num) {
+  if(num < 5) {
+    return "Tiny"
+  }
+  else if(num <= 9) {
+    return "Small"
+  }
+  else if(num <= 14) {
+    return "Medium"
+  }
+  else if(num <= 19) {
+    return "Large"
+  }
+  else {
+    return "Huge";
+  } 
+}
 
+testSize(1);
 
 
 
@@ -297,7 +346,42 @@ testLogicalOr(15);
 [1.Golf Code](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/golf-code)
 ```js
 // Finish and Paste your solution here
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 
+function golfScore(par, strokes) {
+ if (par === 4 && strokes === 1) {
+   return "Hole-in-one!"
+ }
+ else if (par === 4 && strokes === 2) {
+   return "Eagle"
+ }
+ else if (par === 5 && strokes === 2) {
+   return "Eagle"
+ }
+  else if (par === 4 && strokes === 3) {
+   return "Birdie"
+ }
+  else if (par === 4 && strokes === 4) {
+   return "Par"
+ }
+ else if (par === 1 && strokes === 1) {
+   return "Hole-in-one!"
+ }
+ else if (par === 5 && strokes === 5) {
+   return "Par"
+ }
+ else if (par === 4 && strokes === 5) {
+   return "Bogey"
+ }
+ else if (par === 4 && strokes === 6) {
+   return "Double Bogey"
+ }
+ else {
+  return "Go Home!"
+ }
+}
+
+golfScore(4, 1);
 
 
 
